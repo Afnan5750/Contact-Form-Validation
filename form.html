@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="form.css">
+  <script src="https://kit.fontawesome.com/b3f38c3fea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1><span>Contact Us</span></h1>
+    <form class="contact-form" name="submit-to-google-sheet">
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="Full-Name" placeholder="Enter your name" class="contact-form-text" id="contact-name" onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" name="Phone" placeholder="03333395115" class="contact-form-text" id="contact-phone" onkeyup="validatePhone()">
+        <span id="phone-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" name="Email" placeholder="Enter Email" class="contact-form-text" id="contact-email" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea  placeholder="Enter your message" name="Massage" class="contact-form-text" id="contact-message" onkeyup="validateMessage()"></textarea>
+        <span id="message-error"></span>
+      </div>
+
+      <button class="contact-form-btn" onclick="return validateForm()">Submit</button>
+      <span id="submit-error"></span>
+
+    </form>
+
+  </div>
+
+
+
+  <script src="/form.js"></script>
+
+</body>
+
+</html>
